@@ -29,6 +29,7 @@ NeoBundle 'tarruda/vim-conque-repl'
 NeoBundle 'rosenfeld/conque-term'
 NeoBundle 'Shougo/vimproc' , {'build' : 'make -f make_unix.mak'}
 NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'Shougo/unite.vim'
 
 
 "on vim-scriptsBundle 'paredit.vim''
@@ -63,6 +64,9 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+
+" Unite mapping
+nnoremap <Leader>f :Unite -start-insert file_rec<CR>
 
 " misc. key mapping
 imap jk <Esc>
@@ -113,7 +117,7 @@ if has("gui_running")
   " remove toolbar
   set guioptions-=T
   " set colorscheme
-  set background=light
+  set background=dark
   colorscheme solarized
 
 endif
